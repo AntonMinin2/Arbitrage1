@@ -3,13 +3,14 @@ import os
 
 def tiktok_save(url):
     try:
+        print(os.getcwd())
         # Определяем директорию для сохранения видео
         save_dir = "./app/savedvideo_DO"
 
         # Переходим в папку для сохранения
         os.chdir(save_dir)
 
-        pyk.specify_browser('chrome')
+        pyk.specify_browser('firefox')
 
         # Скачиваем видео (в текущую директорию, т.е. в savedvideo)
         pyk.save_tiktok(url, True)
